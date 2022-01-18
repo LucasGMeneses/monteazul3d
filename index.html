@@ -90,7 +90,7 @@
 
 <script>
 Q3D.Config.allVisible = true;
-
+Q3D.Config.localMode = true;
 if (typeof proj4 === "undefined") document.getElementById("lib_proj4js").style.display = "none";
 
 var container = document.getElementById("view"),
@@ -99,7 +99,7 @@ var container = document.getElementById("view"),
 app.init(container);       // initialize viewer
 
 // load the scene
-app.loadSceneFile("./data/index/scene.json", function (scene) {
+app.loadSceneFile("./data/index/scene.js", function (scene) {
   // scene file has been loaded
   app.start();
 }, function (scene) {
